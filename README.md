@@ -129,3 +129,9 @@ data: {"type": "status", "message": "Pushing Pull Request to nmundafale/loglens-
 data: {"type": "status", "message": "Pull Request created successfully: https://github.com/..."}
 data: {"type": "result", "analysis": "**Root Cause**: Massive cross-join OOM...", "github_pr_url": "..."}
 ```
+
+## ⚖️ License
+
+This project is licensed under the GNU General Public License v3.0 (GPLv3) - see the [LICENSE](LICENSE) file for details. 
+
+*Note for Portfolio Reviewers: As the sole author of this codebase, I am open to alternative licensing (e.g., Apache 2.0 / MIT) for enterprise trials or integration. Feel free to reach out.*
