@@ -3,9 +3,7 @@
 An AI-powered Information Density Optimizer CLI and API tool for analyzing massive system and application logs (starting with Apache Spark). 
 It uses local LLMs (like Ollama or vLLM) for high-throughput chunk extraction and distillation, and premium LLMs (like Gemini) for root cause analysis—saving massive amounts of tokens while bypassing context window limits.
 
-LogLens includes an automated remediation engine: it can read your GitHub repositories, find the source code linked to the failing job, generate a fix using the distilled logs, and natively open a Pull Request with the corrected code!
-
--- This repo is work in progress
+Loglens now includes an automated remediation engine: it can read your GitHub repositories, find the source code linked to the failing job, generate a fix using the distilled logs, and natively open a Pull Request with the corrected code!
 
 ---
 
@@ -17,7 +15,7 @@ LogLens includes an automated remediation engine: it can read your GitHub reposi
 - **Context Reduction Monitoring**: Calculates exact percentages showing how much log bloat was discarded (e.g. `20,000 chars -> 5,000 chars`) and injects these metrics directly into the automated Pull Request descriptions.
 - **Provider Agnostic (LiteLLM)**: Fully integrated with `litellm`, allowing you to seamlessly swap between 100+ AI providers (Ollama, Gemini, OpenAI, Anthropic, Azure) with zero code changes.
 - **Pluggable Storage Drivers**: Built to support reading logs from local files, with the architecture ready to be extended to S3, GCS, Azure Blob, HDFS, or any other cloud object store.
-- **Human-in-the-Loop Safety**: While Sparklens completely automates the root cause analysis and raw code generation, it intentionally stops at the Pull Request phase. This guarantees that your team maintains full control over what is merged into production. The automated PR is explicitly tagged as bot-generated so reviewers can apply appropriate scrutiny.
+- **Human-in-the-Loop Safety**: While Loglens completely automates the root cause analysis and raw code generation, it intentionally stops at the Pull Request phase. This guarantees that your team maintains full control over what is merged into production. The automated PR is explicitly tagged as bot-generated so reviewers can apply appropriate scrutiny.
 
 ---
 

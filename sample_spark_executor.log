@@ -1,0 +1,26 @@
+23/10/26 14:30:10 INFO SparkContext: Running Spark version 3.4.1
+23/10/26 14:30:11 INFO SparkContext: Submitted application: HeavyAggregationJob
+23/10/26 14:30:12 INFO DAGScheduler: Got job 0 (saveAsTable at HeavyAggregationJob.scala:105) with 500 output partitions
+23/10/26 14:30:12 INFO DAGScheduler: Final stage: ResultStage 1 (saveAsTable at HeavyAggregationJob.scala:105)
+23/10/26 14:30:12 INFO DAGScheduler: Parents of final stage: List(ShuffleMapStage 0)
+23/10/26 14:30:12 INFO DAGScheduler: Missing parents: List(ShuffleMapStage 0)
+23/10/26 14:30:12 INFO DAGScheduler: Submitting ShuffleMapStage 0 (MapPartitionsRDD[3] at groupBy at HeavyAggregationJob.scala:80), which has no missing parents
+23/10/26 14:30:12 INFO TaskSchedulerImpl: Adding task set 0.0 with 1000 tasks
+23/10/26 14:30:13 INFO TaskSetManager: Starting task 0.0 in stage 0.0 (TID 0, 10.0.1.15, executor 1, partition 0, PROCESS_LOCAL, 8192 bytes)
+23/10/26 14:30:13 INFO TaskSetManager: Starting task 1.0 in stage 0.0 (TID 1, 10.0.1.16, executor 2, partition 1, PROCESS_LOCAL, 8192 bytes)
+23/10/26 14:31:05 INFO TaskSetManager: Finished task 0.0 in stage 0.0 (TID 0) in 52000 ms on 10.0.1.15 (executor 1) (1/1000)
+... (998 tasks complete successfully) ...
+23/10/26 14:45:10 INFO TaskSetManager: Finished task 998.0 in stage 0.0 (TID 998) in 45000 ms on 10.0.1.18 (executor 4) (999/1000)
+23/10/26 14:46:20 WARN TaskSetManager: Lost task 999.0 in stage 0.0 (TID 999) (10.0.1.19 executor 5): ExecutorLostFailure (executor 5 exited caused by one of the running tasks) Reason: Container killed by YARN for exceeding memory limits. 10.4 GB of 10 GB physical memory used. Consider boosting spark.yarn.executor.memoryOverhead or disabling yarn.nodemanager.vmem-check-enabled because of YARN-4714.
+23/10/26 14:46:20 INFO DAGScheduler: Executor lost: 5 (epoch 1)
+23/10/26 14:46:20 INFO TaskSetManager: Re-queueing tasks for 5 from TaskSet 0.0
+23/10/26 14:46:20 INFO TaskSetManager: Starting task 999.1 in stage 0.0 (TID 1000, 10.0.1.20, executor 6, partition 999, PROCESS_LOCAL, 8192 bytes)
+23/10/26 14:48:15 WARN TaskSetManager: Lost task 999.1 in stage 0.0 (TID 1000) (10.0.1.20 executor 6): ExecutorLostFailure (executor 6 exited caused by one of the running tasks) Reason: Container killed by YARN for exceeding memory limits. 10.5 GB of 10 GB physical memory used. Consider boosting spark.yarn.executor.memoryOverhead.
+23/10/26 14:48:15 INFO DAGScheduler: Executor lost: 6 (epoch 2)
+23/10/26 14:48:15 INFO TaskSetManager: Starting task 999.2 in stage 0.0 (TID 1001, 10.0.1.21, executor 7, partition 999, PROCESS_LOCAL, 8192 bytes)
+23/10/26 14:50:30 WARN TaskSetManager: Lost task 999.2 in stage 0.0 (TID 1001) (10.0.1.21 executor 7): ExecutorLostFailure (executor 7 exited caused by one of the running tasks) Reason: Container killed by YARN for exceeding memory limits. 10.6 GB of 10 GB physical memory used.
+23/10/26 14:50:30 ERROR TaskSetManager: Task 999 in stage 0.0 failed 4 times; aborting job
+23/10/26 14:50:30 INFO TaskSchedulerImpl: Removed TaskSet 0.0, whose tasks have all completed, from pool 
+23/10/26 14:50:30 INFO TaskSchedulerImpl: Cancelling stage 0
+23/10/26 14:50:30 ERROR DAGScheduler: Job 0 failed: Task 999 in stage 0.0 failed 4 times, most recent failure: Fatal error: ExecutorLostFailure (executor 7 exited caused by one of the running tasks) Reason: Container killed by YARN for exceeding memory limits. 10.6 GB of 10 GB physical memory used.
+23/10/26 14:50:31 INFO SparkContext: Invoking stop() from shutdown hook

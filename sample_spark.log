@@ -1,0 +1,90 @@
+23/10/25 10:15:22 INFO SparkContext: Running Spark version 3.4.1
+23/10/25 10:15:22 INFO ResourceUtils: ==============================================================
+23/10/25 10:15:22 INFO ResourceUtils: No custom resources configured for spark.driver.
+23/10/25 10:15:22 INFO ResourceUtils: ==============================================================
+23/10/25 10:15:22 INFO SparkContext: Submitted application: CustomerDataProcessing
+23/10/25 10:15:22 INFO SecurityManager: Changing view acls to: hadoop
+23/10/25 10:15:22 INFO SecurityManager: Changing modify acls to: hadoop
+23/10/25 10:15:22 INFO SecurityManager: Changing view acls groups to: 
+23/10/25 10:15:22 INFO SecurityManager: Changing modify acls groups to: 
+23/10/25 10:15:22 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(hadoop); groups with view permissions: Set(); users  with modify permissions: Set(hadoop); groups with modify permissions: Set()
+23/10/25 10:15:23 INFO Utils: Successfully started service 'sparkDriver' on port 43879.
+23/10/25 10:15:23 INFO SparkEnv: Registering MapOutputTracker
+23/10/25 10:15:23 INFO SparkEnv: Registering BlockManagerMaster
+23/10/25 10:15:23 INFO BlockManagerMasterEndpoint: Using org.apache.spark.storage.DefaultTopologyMapper for getting topology information
+23/10/25 10:15:23 INFO BlockManagerMasterEndpoint: BlockManagerMasterEndpoint up
+23/10/25 10:15:23 INFO SparkEnv: Registering OutputCommitCoordinator
+23/10/25 10:15:24 INFO DAGScheduler: Got job 0 (count at CustomerDataProcessing.scala:42) with 2 output partitions
+23/10/25 10:15:24 INFO DAGScheduler: Final stage: ResultStage 0 (count at CustomerDataProcessing.scala:42)
+23/10/25 10:15:24 INFO DAGScheduler: Parents of final stage: List()
+23/10/25 10:15:24 INFO DAGScheduler: Missing parents: List()
+23/10/25 10:15:24 INFO DAGScheduler: Submitting ResultStage 0 (MapPartitionsRDD[1] at count at CustomerDataProcessing.scala:42), which has no missing parents
+23/10/25 10:15:24 INFO MemoryStore: Block broadcast_0 stored as values in memory (estimated size 16.2 KiB, free 366.3 MiB)
+23/10/25 10:15:24 INFO MemoryStore: Block broadcast_0_piece0 stored as bytes in memory (estimated size 7.3 KiB, free 366.2 MiB)
+23/10/25 10:15:24 INFO BlockManagerInfo: Added broadcast_0_piece0 in memory on 192.168.1.100:43879 (size: 7.3 KiB, free: 366.3 MiB)
+23/10/25 10:15:24 INFO SparkContext: Created broadcast 0 from broadcast at DAGScheduler.scala:1535
+23/10/25 10:15:24 INFO DAGScheduler: Submitting 2 missing tasks from ResultStage 0 (MapPartitionsRDD[1] at count at CustomerDataProcessing.scala:42) (first 15 tasks are for partitions Vector(0, 1))
+23/10/25 10:15:24 INFO TaskSchedulerImpl: Adding task set 0.0 with 2 tasks
+23/10/25 10:15:24 INFO TaskSetManager: Starting task 0.0 in stage 0.0 (TID 0, 192.168.1.101, executor 1, partition 0, PROCESS_LOCAL, 7623 bytes)
+23/10/25 10:15:24 INFO TaskSetManager: Starting task 1.0 in stage 0.0 (TID 1, 192.168.1.102, executor 2, partition 1, PROCESS_LOCAL, 7623 bytes)
+23/10/25 10:15:25 INFO TaskSetManager: Finished task 0.0 in stage 0.0 (TID 0) in 723 ms on 192.168.1.101 (executor 1) (1/2)
+23/10/25 10:15:25 INFO TaskSetManager: Finished task 1.0 in stage 0.0 (TID 1) in 780 ms on 192.168.1.102 (executor 2) (2/2)
+23/10/25 10:15:25 INFO TaskSchedulerImpl: Removed TaskSet 0.0, whose tasks have all completed, from pool 
+23/10/25 10:15:25 INFO DAGScheduler: ResultStage 0 (count at CustomerDataProcessing.scala:42) finished in 1.121 s
+23/10/25 10:15:25 INFO DAGScheduler: Job 0 finished: count at CustomerDataProcessing.scala:42, took 1.250 s
+23/10/25 10:16:10 INFO DAGScheduler: Got job 1 (collect at CustomerDataProcessing.scala:89) with 200 output partitions
+23/10/25 10:16:10 INFO DAGScheduler: Final stage: ResultStage 2 (collect at CustomerDataProcessing.scala:89)
+23/10/25 10:16:10 INFO DAGScheduler: Parents of final stage: List(ShuffleMapStage 1)
+23/10/25 10:16:10 INFO DAGScheduler: Missing parents: List(ShuffleMapStage 1)
+23/10/25 10:16:10 INFO DAGScheduler: Submitting ShuffleMapStage 1 (MapPartitionsRDD[4] at join at CustomerDataProcessing.scala:75), which has no missing parents
+23/10/25 10:16:11 INFO TaskSchedulerImpl: Adding task set 1.0 with 2 tasks
+23/10/25 10:16:11 INFO TaskSetManager: Starting task 0.0 in stage 1.0 (TID 2, 192.168.1.101, executor 1, partition 0, PROCESS_LOCAL, 8192 bytes)
+23/10/25 10:16:11 INFO TaskSetManager: Starting task 1.0 in stage 1.0 (TID 3, 192.168.1.102, executor 2, partition 1, PROCESS_LOCAL, 8192 bytes)
+23/10/25 10:16:35 INFO TaskSetManager: Finished task 0.0 in stage 1.0 (TID 2) in 24102 ms on 192.168.1.101 (executor 1) (1/2)
+23/10/25 10:16:40 INFO TaskSetManager: Finished task 1.0 in stage 1.0 (TID 3) in 29153 ms on 192.168.1.102 (executor 2) (2/2)
+23/10/25 10:16:40 INFO TaskSchedulerImpl: Removed TaskSet 1.0, whose tasks have all completed, from pool 
+23/10/25 10:16:40 INFO DAGScheduler: ShuffleMapStage 1 (join at CustomerDataProcessing.scala:75) finished in 29.800 s
+23/10/25 10:16:40 INFO DAGScheduler: Submitting ResultStage 2 (MapPartitionsRDD[5] at collect at CustomerDataProcessing.scala:89), which has no missing parents
+23/10/25 10:16:40 INFO TaskSchedulerImpl: Adding task set 2.0 with 200 tasks
+23/10/25 10:16:41 INFO TaskSetManager: Starting task 0.0 in stage 2.0 (TID 4, 192.168.1.101, executor 1, partition 0, NODE_LOCAL, 7866 bytes)
+23/10/25 10:17:15 INFO TaskSetManager: Finished task 0.0 in stage 2.0 (TID 4) in 34500 ms on 192.168.1.101 (executor 1) (1/200)
+23/10/25 10:17:15 INFO TaskSetManager: Starting task 1.0 in stage 2.0 (TID 5, 192.168.1.101, executor 1, partition 1, PROCESS_LOCAL, 7866 bytes)
+23/10/25 10:18:15 WARN TaskSetManager: Lost task 1.0 in stage 2.0 (TID 5) (192.168.1.101 executor 1): java.lang.OutOfMemoryError: GC overhead limit exceeded
+	at java.lang.String.substring(String.java:1969)
+	at org.apache.spark.sql.catalyst.expressions.GeneratedClass$GeneratedIteratorForCodegenStage1.processNext(Unknown Source)
+	at org.apache.spark.sql.execution.BufferedRowIterator.hasNext(BufferedRowIterator.java:43)
+	at org.apache.spark.sql.execution.WholeStageCodegenExec$$anon$1.hasNext(WholeStageCodegenExec.scala:759)
+	at scala.collection.Iterator$$anon$11.hasNext(Iterator.scala:491)
+	at scala.collection.Iterator$$anon$12.hasNext(Iterator.scala:512)
+	at scala.collection.Iterator$$anon$11.hasNext(Iterator.scala:491)
+	at org.apache.spark.util.Utils$.getIteratorSize(Utils.scala:1935)
+	at org.apache.spark.rdd.RDD.$anonfun$count$1(RDD.scala:1255)
+	at org.apache.spark.rdd.RDD.$anonfun$count$1$adapted(RDD.scala:1255)
+	at org.apache.spark.SparkContext.$anonfun$runJob$5(SparkContext.scala:2269)
+	at org.apache.spark.scheduler.ResultTask.runTask(ResultTask.scala:90)
+	at org.apache.spark.scheduler.Task.run(Task.scala:136)
+	at org.apache.spark.executor.Executor$TaskRunner.$anonfun$run$3(Executor.scala:548)
+	at org.apache.spark.util.Utils$.tryWithSafeFinally(Utils.scala:1506)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:551)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+23/10/25 10:18:15 INFO TaskSetManager: Starting task 1.1 in stage 2.0 (TID 6, 192.168.1.101, executor 1, partition 1, PROCESS_LOCAL, 7866 bytes)
+23/10/25 10:19:20 WARN TaskSetManager: Lost task 1.1 in stage 2.0 (TID 6) (192.168.1.101 executor 1): java.lang.OutOfMemoryError: GC overhead limit exceeded
+23/10/25 10:19:20 INFO TaskSetManager: Starting task 1.2 in stage 2.0 (TID 7, 192.168.1.101, executor 1, partition 1, PROCESS_LOCAL, 7866 bytes)
+23/10/25 10:20:10 WARN TaskSetManager: Lost task 1.2 in stage 2.0 (TID 7) (192.168.1.101 executor 1): java.lang.OutOfMemoryError: GC overhead limit exceeded
+23/10/25 10:20:10 INFO TaskSetManager: Starting task 1.3 in stage 2.0 (TID 8, 192.168.1.101, executor 1, partition 1, PROCESS_LOCAL, 7866 bytes)
+23/10/25 10:21:05 WARN TaskSetManager: Lost task 1.3 in stage 2.0 (TID 8) (192.168.1.101 executor 1): java.lang.OutOfMemoryError: GC overhead limit exceeded
+23/10/25 10:21:05 ERROR TaskSetManager: Task 1 in stage 2.0 failed 4 times; aborting job
+23/10/25 10:21:05 INFO TaskSchedulerImpl: Removed TaskSet 2.0, whose tasks have all completed, from pool 
+23/10/25 10:21:05 INFO TaskSchedulerImpl: Cancelling stage 2
+23/10/25 10:21:05 ERROR DAGScheduler: Job 1 failed: java.lang.OutOfMemoryError: GC overhead limit exceeded
+23/10/25 10:21:06 INFO SparkContext: Invoking stop() from shutdown hook
+23/10/25 10:21:06 INFO SparkUI: Stopped Spark web UI at http://192.168.1.100:4040
+23/10/25 10:21:06 INFO MapOutputTrackerMasterEndpoint: MapOutputTrackerMasterEndpoint stopped!
+23/10/25 10:21:06 INFO MemoryStore: MemoryStore cleared
+23/10/25 10:21:06 INFO BlockManager: BlockManager stopped
+23/10/25 10:21:06 INFO BlockManagerMaster: BlockManagerMaster stopped
+23/10/25 10:21:06 INFO OutputCommitCoordinator$OutputCommitCoordinatorEndpoint: OutputCommitCoordinator stopped!
+23/10/25 10:21:06 INFO SparkContext: Successfully stopped SparkContext
+23/10/25 10:21:06 INFO ShutdownHookManager: Shutdown hook called

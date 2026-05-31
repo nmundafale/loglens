@@ -1,0 +1,24 @@
+23/10/27 09:00:00 INFO SparkContext: Running Spark version 3.4.1
+23/10/27 09:00:01 INFO SparkContext: Submitted application: AnalyticsDashboardRefresh
+23/10/27 09:00:02 INFO Client: Requesting 100 executors from YARN, each with 16g memory and 4 cores.
+23/10/27 09:00:10 INFO YarnAllocator: Received 100 containers from YARN. Starting executors.
+23/10/27 09:00:15 INFO DAGScheduler: Got job 0 (save at AnalyticsDashboardRefresh.scala:45) with 2000 output partitions
+23/10/27 09:00:15 INFO TaskSchedulerImpl: Adding task set 0.0 with 2000 tasks
+23/10/27 09:00:16 INFO TaskSetManager: Starting task 0.0 in stage 0.0 (TID 0, 10.0.5.10, executor 1, partition 0, PROCESS_LOCAL, 7000 bytes)
+23/10/27 09:00:16 INFO TaskSetManager: Starting task 1.0 in stage 0.0 (TID 1, 10.0.5.11, executor 2, partition 1, PROCESS_LOCAL, 7000 bytes)
+... (starting thousands of tasks quickly) ...
+23/10/27 09:00:18 INFO TaskSetManager: Finished task 0.0 in stage 0.0 (TID 0) in 1000 ms on 10.0.5.10 (executor 1) (1/2000). Peak execution memory: 120 MB.
+23/10/27 09:00:18 INFO TaskSetManager: Finished task 1.0 in stage 0.0 (TID 1) in 1050 ms on 10.0.5.11 (executor 2) (2/2000). Peak execution memory: 135 MB.
+... (all tasks taking extremely brief times and using very little memory relative to 16g allocations) ...
+23/10/27 09:00:45 INFO TaskSetManager: Finished task 1999.0 in stage 0.0 (TID 1999) in 1100 ms on 10.0.5.25 (executor 50) (2000/2000)
+23/10/27 09:00:45 INFO TaskSchedulerImpl: Removed TaskSet 0.0, whose tasks have all completed, from pool 
+23/10/27 09:00:45 INFO DAGScheduler: ResultStage 0 (save at AnalyticsDashboardRefresh.scala:45) finished in 30.0 s
+23/10/27 09:00:46 INFO SparkContext: Invoking stop() from shutdown hook
+23/10/27 09:00:46 INFO SparkUI: Stopped Spark web UI at http://10.0.5.1:4040
+23/10/27 09:00:46 INFO MapOutputTrackerMasterEndpoint: MapOutputTrackerMasterEndpoint stopped!
+23/10/27 09:00:46 INFO MemoryStore: MemoryStore cleared
+23/10/27 09:00:46 INFO BlockManager: BlockManager stopped
+23/10/27 09:00:46 INFO BlockManagerMaster: BlockManagerMaster stopped
+23/10/27 09:00:46 INFO OutputCommitCoordinator$OutputCommitCoordinatorEndpoint: OutputCommitCoordinator stopped!
+23/10/27 09:00:46 INFO SparkContext: Successfully stopped SparkContext
+23/10/27 09:00:46 INFO ShutdownHookManager: Shutdown hook called
